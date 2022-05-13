@@ -10,8 +10,8 @@ services:
     ports:
       - "${SQL_PORT}:1433"
     networks:
-      - department-network
+      - finecomm-network
 
 networks:
-  department-network:
+  finecomm-network:
     driver: bridge
