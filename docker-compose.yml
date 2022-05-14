@@ -1,0 +1,17 @@
+version: "3"
+services:
+  backend-db:
+    image: mcr.microsoft.com/mssql/server
+    restart: always
+    environment:
+      SA_PASSWORD: "${DB_PASSWORD}"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "${MSSQL_PID}"
+    ports:
+      - "${SQL_PORT}:1433"
+    networks:
+      - finecomm-network
+
+networks:
+  finecomm-network:
+    driver: bridge
