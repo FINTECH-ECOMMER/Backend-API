@@ -16,6 +16,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
+<<<<<<< HEAD
+=======
+import java.math.BigInteger;
+>>>>>>> 55371ec (Updated: File naming and column defaults)
 import java.time.LocalDateTime;
 
 @Entity
@@ -31,7 +35,11 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
+<<<<<<< HEAD
     private Long productId;
+=======
+    private BigInteger productId;
+>>>>>>> 55371ec (Updated: File naming and column defaults)
 
     @Column(nullable = false, columnDefinition = "varchar(150) DEFAULT ''")
     private String productName;
