@@ -19,7 +19,7 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping("")
-    public Product saveDepartment(@RequestBody Product product) {
+    public Product saveProduct(@RequestBody Product product) {
         return productService.saveProduct(product);
     }
 
