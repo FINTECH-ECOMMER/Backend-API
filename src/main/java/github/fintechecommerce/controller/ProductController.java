@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigInteger;
+
 @RestController
 @RequestMapping(path = "${api_prefix}/products")
 public class ProductController {
@@ -22,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Product getProduct(@PathVariable("id") Long productId) {
+    public Product getProduct(@PathVariable("id") BigInteger productId) {
         return productService.findProductById(productId);
     }
 }

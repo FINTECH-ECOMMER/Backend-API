@@ -4,9 +4,11 @@ import github.fintechecommerce.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+import java.math.BigInteger;
 
-    Product findByProductId(Long productId);
+@Repository
+public interface ProductRepository extends JpaRepository<Product, BigInteger> {
+
+    Product findByProductId(BigInteger productId);
 
 }

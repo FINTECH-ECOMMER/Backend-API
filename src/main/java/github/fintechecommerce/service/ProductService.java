@@ -5,6 +5,8 @@ import github.fintechecommerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
+
 @Service
 public class ProductService {
 
@@ -16,7 +18,7 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    public Product findProductById(Long productId) {
+    public Product findProductById(BigInteger productId) {
 
         return productRepository.findByProductId(productId);
     }
