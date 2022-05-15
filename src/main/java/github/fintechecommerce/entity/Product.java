@@ -5,15 +5,20 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -31,7 +36,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
+    @Column(name = "product_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
     private BigInteger productId;
 
     @Column(nullable = false, columnDefinition = "varchar(150) DEFAULT ''")
@@ -59,7 +64,8 @@ public class Product {
     @UpdateTimestamp
     private LocalDateTime updatedDateTime;
 
-
-//    Todo : Add Soft Delete
-//    Todo: Create Response Trait For All
+    @OneToOne(cascade = CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @JoinTable(name = "product_specification", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
+    private Specification specification;
 }
