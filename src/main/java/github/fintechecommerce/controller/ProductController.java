@@ -1,6 +1,7 @@
 package github.fintechecommerce.controller;
 
 import github.fintechecommerce.entity.Product;
+import github.fintechecommerce.model.GeneralResponse;
 import github.fintechecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +19,15 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping("")
-    public Product saveProduct(@RequestBody Product product) {
-        return productService.saveProduct(product);
+
+    @GetMapping({"", "/"})
+    public GeneralResponse getProducts() {
+        return new GeneralResponse(productService.findAllProducts());
     }
 
-    @GetMapping("/{id}")
-    public Product getProduct(@PathVariable("id") BigInteger productId) {
-        return productService.findProductById(productId);
+    @GetMapping({"/{id}", "/{id}/"})
+    public GeneralResponse getProduct(@PathVariable("id") BigInteger productId) {
+
+        return new GeneralResponse(productService.findProductById(productId));
     }
 }
