@@ -18,13 +18,13 @@ public class SpecificationController {
     @Autowired
     private SpecificationService specificationService;
 
-    @PostMapping({"", "/"})
-    public GeneralResponse getProducts() {
+    @GetMapping({"", "/"})
+    public GeneralResponse getSpecifications() {
         return new GeneralResponse(specificationService.findAllSpecifications());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
-    public GeneralResponse getProduct(@PathVariable("id") BigInteger productId) {
+    public GeneralResponse getSpecifications(@PathVariable("id") BigInteger productId) {
 
         return new GeneralResponse(specificationService.findSpecificationById(productId));
     }

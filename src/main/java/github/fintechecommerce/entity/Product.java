@@ -1,5 +1,6 @@
 package github.fintechecommerce.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -50,9 +51,11 @@ public class Product {
 
     @CreationTimestamp
     @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT GETDATE()")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdDateTime;
 
     @UpdateTimestamp
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updatedDateTime;
 
     @OneToOne(cascade = CascadeType.ALL)
