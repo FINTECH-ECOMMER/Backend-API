@@ -20,7 +20,7 @@ public class SpecificationController {
 
     @PostMapping({"", "/"})
     public GeneralResponse getProducts() {
-        return new GeneralResponse(specificationService.findAllSepecification());
+        return new GeneralResponse(specificationService.findAllSpecifications());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
