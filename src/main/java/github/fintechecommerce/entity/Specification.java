@@ -55,20 +55,16 @@ public class Specification {
     private Boolean deleted = Boolean.FALSE;
 
     @CreationTimestamp
-    @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT GETDATE()")
+    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdDateTime;
 
     @UpdateTimestamp
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-
     private LocalDateTime updatedDateTime;
 
 
     @OneToOne(mappedBy = "specification")
     @Cascade(CascadeType.ALL)
     private Product product;
-
-    //    Todo : Add Soft Delete
-//    Todo: Create Response Trait For All
 }
