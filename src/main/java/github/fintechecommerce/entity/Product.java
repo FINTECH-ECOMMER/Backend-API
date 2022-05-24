@@ -62,4 +62,9 @@ public class Product {
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinTable(name = "product_specification", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
     private Specification specification;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @JoinTable(name = "product_video", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
+    private Video video;
 }
