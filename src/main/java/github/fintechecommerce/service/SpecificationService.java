@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
+import java.util.List;
 
 @Service
 public class SpecificationService {
@@ -14,8 +15,9 @@ public class SpecificationService {
     private SpecificationRepository specificationRepository;
 
 
-    public Specification saveSpecification(Specification specification) {
-        return specificationRepository.save(specification);
+    public List<Specification> findAllSpecifications() {
+
+        return specificationRepository.findAll();
     }
 
     public Specification findSpecificationById(BigInteger specificationId) {
