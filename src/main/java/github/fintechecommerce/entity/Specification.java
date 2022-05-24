@@ -7,11 +7,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
@@ -22,29 +29,27 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "products")
-@SQLDelete(sql = "UPDATE products SET deleted=true WHERE product_id=?")
-public class Product {
+@Table(name = "specifications")
+@SQLDelete(sql = "UPDATE specification SET deleted=true WHERE specification_id=?")
+public class Specification {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
-    private BigInteger productId;
+    @Column(name = "specification_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
+    private BigInteger specificationId;
 
-    @Column(nullable = false, columnDefinition = "varchar(150) DEFAULT ''")
-    private String productName;
+    @Column(nullable = false, columnDefinition = "INTEGER DEFAULT 0")
+    private int productWeight;
+
+    @Column(nullable = false, columnDefinition = "INTEGER DEFAULT 0")
+    private String productLength;
+
+    @Column(nullable = false, columnDefinition = "INTEGER DEFAULT 0")
+    private BigDecimal productWidth;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT ''")
-    private String productDetails;
+    private String product_color;
 
-    @Column(nullable = false, columnDefinition = "NUMERIC(38,2) DEFAULT 0", precision = 38, scale = 2)
-    private BigDecimal product_price;
-
-    @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT ''")
-    private String productDescription;
-
-    @Column(nullable = false, columnDefinition = "BIT DEFAULT 0")
-    private Boolean product_isFragile = Boolean.FALSE;
 
     @Column(nullable = false, columnDefinition = "BIT DEFAULT 0")
     private Boolean deleted = Boolean.FALSE;
@@ -56,10 +61,14 @@ public class Product {
 
     @UpdateTimestamp
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+
     private LocalDateTime updatedDateTime;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    @JoinTable(name = "product_specification", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
-    private Specification specification;
+
+    @OneToOne(mappedBy = "specification")
+    @Cascade(CascadeType.ALL)
+    private Product product;
+
+    //    Todo : Add Soft Delete
+//    Todo: Create Response Trait For All
 }
