@@ -31,7 +31,7 @@ public class Product {
     @Column(name = "product_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
     private BigInteger productId;
 
-    @Column(nullable = false, columnDefinition = "varchar(150) DEFAULT ''")
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String productName;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT ''")
@@ -50,7 +50,7 @@ public class Product {
     private Boolean deleted = Boolean.FALSE;
 
     @CreationTimestamp
-    @Column(nullable = false, columnDefinition = "VARCHAR(MAX) DEFAULT GETDATE()")
+    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdDateTime;
 
@@ -62,4 +62,9 @@ public class Product {
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinTable(name = "product_specification", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
     private Specification specification;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @JoinTable(name = "product_video", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
+    private Video video;
 }
