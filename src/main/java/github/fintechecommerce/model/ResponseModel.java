@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 
 @Data
 @RequiredArgsConstructor
-public class GeneralResponse {
+public class ResponseModel<ResponseData> {
     private int code = HttpStatus.OK.value();
     private String status = HttpStatus.OK.getReasonPhrase();
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime time = LocalDateTime.now();
-    private final Object data;
+    private final ResponseData data;
 }
