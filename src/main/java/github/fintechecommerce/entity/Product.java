@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "products")
 @SQLDelete(sql = "UPDATE products SET deleted=true WHERE product_id=?")
-@RedisHash("Product")
 public class Product implements Serializable {
 
     @Id
