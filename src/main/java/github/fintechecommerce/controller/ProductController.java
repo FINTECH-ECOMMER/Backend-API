@@ -21,12 +21,12 @@ public class ProductController {
 
     @GetMapping({"", "/"})
     public ResponseModel<List<Product>> getProducts() {
-        return new ResponseModel<>(productService.findAllProducts());
+        return new ResponseModel<>(productService.fetchAllProducts());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseModel<Product> getProduct(@PathVariable("id") BigInteger productId) {
 
-        return new ResponseModel<>(productService.findProductById(productId));
+        return new ResponseModel<>(productService.fetchByProductId(productId));
     }
 }
