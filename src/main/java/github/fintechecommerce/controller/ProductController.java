@@ -4,6 +4,7 @@ import github.fintechecommerce.entity.Product;
 import github.fintechecommerce.model.ResponseModel;
 import github.fintechecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ public class ProductController {
 
     @GetMapping({"", "/"})
     public ResponseModel<List<Product>> getProducts() {
-        return new ResponseModel<>(productService.findAllProducts());
+        return new ResponseModel<>(HttpStatus.OK.value(),HttpStatus.OK.getReasonPhrase(), productService.findAllProducts());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
