@@ -18,7 +18,6 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-
     @GetMapping({"", "/"})
     public ResponseModel<List<Product>> getProducts() {
         return new ResponseModel<>(productService.fetchAllProducts());
@@ -26,7 +25,6 @@ public class ProductController {
 
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseModel<Product> getProduct(@PathVariable("id") BigInteger productId) {
-
         return new ResponseModel<>(productService.fetchByProductId(productId));
     }
 }

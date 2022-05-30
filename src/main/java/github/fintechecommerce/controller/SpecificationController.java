@@ -21,12 +21,12 @@ public class SpecificationController {
 
     @GetMapping({"", "/"})
     public ResponseModel<List<Specification>> getSpecifications() {
-        return new ResponseModel<>(specificationService.findAllSpecifications());
+        return new ResponseModel<>(specificationService.fetchAllSpecifications());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseModel<Specification> getSpecifications(@PathVariable("id") BigInteger productId) {
 
-        return new ResponseModel<>(specificationService.findSpecificationById(productId));
+        return new ResponseModel<>(specificationService.fetchSpecificationById(productId));
     }
 }
