@@ -20,12 +20,12 @@ public class VideoController {
 
     @GetMapping({"", "/"})
     public ResponseModel<List<Video>> getVideos() {
-        return new ResponseModel<>(videoService.findAllVideos());
+        return new ResponseModel<>(videoService.fetchAllVideos());
     }
 
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseModel<Video> getVideo(@PathVariable("id") BigInteger videoId) {
 
-        return new ResponseModel<>(videoService.findVideoById(videoId));
+        return new ResponseModel<>(videoService.fetchVideoById(videoId));
     }
 }

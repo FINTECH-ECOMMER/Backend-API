@@ -19,15 +19,17 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-
     @GetMapping({"", "/"})
     public ResponseModel<List<Product>> getProducts() {
+<<<<<<< HEAD
         return new ResponseModel<>(HttpStatus.OK.value(),HttpStatus.OK.getReasonPhrase(), productService.findAllProducts());
+=======
+        return new ResponseModel<>(productService.fetchAllProducts());
+>>>>>>> b5bd8728b912075308779c9a78675d088e96d7f3
     }
 
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseModel<Product> getProduct(@PathVariable("id") BigInteger productId) {
-
-        return new ResponseModel<>(productService.findProductById(productId));
+        return new ResponseModel<>(productService.fetchByProductId(productId));
     }
 }
