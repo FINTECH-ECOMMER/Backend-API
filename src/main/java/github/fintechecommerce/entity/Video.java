@@ -61,5 +61,6 @@ public class Video implements Serializable {
     private LocalDateTime updatedAtDateTime;
 
     @OneToOne(mappedBy = "video", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Product product;
 }
