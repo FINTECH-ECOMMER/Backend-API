@@ -1,17 +1,15 @@
 package github.fintechecommerce.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
@@ -20,13 +18,12 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Table(name = "products")
 @SQLDelete(sql = "UPDATE products SET deleted=true WHERE product_id=?")
-public class Product {
+public class Product implements Serializable {
 
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
     private BigInteger productId;
@@ -47,24 +44,31 @@ public class Product {
     private Boolean product_isFragile = Boolean.FALSE;
 
     @Column(nullable = false, columnDefinition = "BIT DEFAULT 0")
+    @JsonIgnore
     private Boolean deleted = Boolean.FALSE;
 
     @CreationTimestamp
+    @JsonIgnore
     @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createdDateTime;
+    private LocalDateTime createdAtDateTime;
 
     @UpdateTimestamp
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime updatedDateTime;
+    @JsonIgnore
+    private LocalDateTime updatedAtDateTime;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    @JoinTable(name = "product_specification", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
+    @JoinTable(name = "product_specification",
+            joinColumns =
+                    {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+            inverseJoinColumns =
+                    {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
     private Specification specification;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    @JoinTable(name = "product_video", joinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")}, inverseJoinColumns = {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(name = "product_video",
+            joinColumns =
+                    {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+            inverseJoinColumns =
+                    {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
     private Video video;
 }

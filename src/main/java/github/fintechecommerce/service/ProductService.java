@@ -10,22 +10,18 @@ import java.util.List;
 
 @Service
 public class ProductService {
-
+    public static final String KEY = "PRODUCTS";
     @Autowired
     private ProductRepository productRepository;
 
-
-    public Product saveProduct(Product product) {
-        return productRepository.save(product);
-    }
-
-    public Product findProductById(BigInteger productId) {
-
+    //    @Cacheable(value = KEY, key = "#productId", unless = "#result == null")
+    public Product fetchByProductId(BigInteger productId) {
         return productRepository.findByProductId(productId);
     }
 
-    public List<Product> findAllProducts() {
-
+    //    @Cacheable(value = KEY, unless = "#result == null")
+    public List<Product> fetchAllProducts() {
         return productRepository.findAll();
     }
+
 }
