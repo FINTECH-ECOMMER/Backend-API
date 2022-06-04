@@ -1,84 +1,79 @@
-2022-06-04 17:19:44.09 Server      Microsoft SQL Server 2022 (CTP2.0) - 16.0.600.9 (X64) 
+2022-06-04 17:22:32.89 Server      Microsoft SQL Server 2022 (CTP2.0) - 16.0.600.9 (X64) 
 	May 20 2022 13:29:42 
 	Copyright (C) 2022 Microsoft Corporation
 	Express Edition (64-bit) on Linux (Ubuntu 20.04.4 LTS) <X64>
-2022-06-04 17:19:44.09 Server      UTC adjustment: 0:00
-2022-06-04 17:19:44.10 Server      (c) Microsoft Corporation.
-2022-06-04 17:19:44.10 Server      All rights reserved.
-2022-06-04 17:19:44.11 Server      Server process ID is 468.
-2022-06-04 17:19:44.11 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
-2022-06-04 17:19:44.12 Server      Registry startup parameters: 
+2022-06-04 17:22:32.89 Server      UTC adjustment: 0:00
+2022-06-04 17:22:32.90 Server      (c) Microsoft Corporation.
+2022-06-04 17:22:32.90 Server      All rights reserved.
+2022-06-04 17:22:32.90 Server      Server process ID is 456.
+2022-06-04 17:22:32.91 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2022-06-04 17:22:32.91 Server      Registry startup parameters: 
 	 -d /var/opt/mssql/data/master.mdf
 	 -l /var/opt/mssql/data/mastlog.ldf
 	 -e /var/opt/mssql/log/errorlog
-2022-06-04 17:19:44.13 Server      SQL Server detected 1 sockets with 2 cores per socket and 2 logical processors per socket, 2 total logical processors; using 2 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
-2022-06-04 17:19:44.14 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
-2022-06-04 17:19:44.14 Server      Detected 2957 MB of RAM. This is an informational message; no user action is required.
-2022-06-04 17:19:44.15 Server      Using conventional memory in the memory manager.
-2022-06-04 17:19:44.15 Server      Page exclusion bitmap is enabled.
-2022-06-04 17:19:44.16 Server      Buffer pool extension is not supported on Linux platform.
-2022-06-04 17:19:44.17 Server      Buffer Pool: Allocating 524288 bytes for 352933 hashPages.
-2022-06-04 17:19:44.49 Server      Buffer pool extension is already disabled. No action is necessary.
-2022-06-04 17:19:45.74 Server      Installing Client TLS certificates to the store.
-2022-06-04 17:19:45.76 Server      Error searching first file in /usr/local/share/ca-certificates/mssql-ca-certificates: 3(The system cannot find the path specified.)
-2022-06-04 17:19:45.76 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
-2022-06-04 17:19:45.85 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
-2022-06-04 17:19:45.90 Server      Query Store settings initialized with enabled = 1, 
-2022-06-04 17:19:45.92 Server      The maximum number of dedicated administrator connections for this instance is '1'
-2022-06-04 17:19:45.94 Server      Node configuration: node 0: CPU mask: 0x0000000000000003:0 Active CPU mask: 0x0000000000000003:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
-2022-06-04 17:19:45.98 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
-2022-06-04 17:19:46.03 Server      In-Memory OLTP initialized on lowend machine.
-2022-06-04 17:19:46.08 Server      CLR version v4.0.30319 loaded.
-2022-06-04 17:19:46.10 Server      [INFO] Created Extended Events session 'hkenginexesession'
-2022-06-04 17:19:46.12 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-2022-06-04 17:19:46.19 Server      Total Log Writer threads: 1, Node CPUs: 1, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
-2022-06-04 17:19:46.22 Server      clflush is selected for pmem flush operation.
-2022-06-04 17:19:46.23 Server      Software Usage Metrics is disabled.
-2022-06-04 17:19:46.28 spid14s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:46.32 spid14s     Starting up database 'master'.
-2022-06-04 17:19:46.43 spid14s     4 transactions rolled forward in database 'master' (1:0). This is an informational message only. No user action is required.
-2022-06-04 17:19:46.46 spid14s     0 transactions rolled back in database 'master' (1:0). This is an informational message only. No user action is required.
-2022-06-04 17:19:46.49 spid14s     Recovery is writing a checkpoint in database 'master' (1). This is an informational message only. No user action is required.
-2022-06-04 17:19:46.73 Server      Common language runtime (CLR) functionality initialized.
-2022-06-04 17:19:46.78 spid14s     Service Master Key could not be decrypted using one of its encryptions. See sys.key_encryptions for details.
-2022-06-04 17:19:46.80 spid14s     An error occurred during Service Master Key initialization. SQLErrorCode=33095, State=14, LastOsError=2.
-2022-06-04 17:19:46.86 spid23s     External governance manager initialized
-2022-06-04 17:19:46.85 spid14s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
-2022-06-04 17:19:46.89 spid23s     Attribute synchronization manager initialized
-2022-06-04 17:19:46.90 spid14s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
-2022-06-04 17:19:46.92 spid14s     XE session 'system_health' started.
-2022-06-04 17:19:46.97 spid14s     SQL Trace ID 1 was started by login "sa".
-2022-06-04 17:19:46.98 spid14s     Server name is 'df677263e1dc'. This is an informational message only. No user action is required.
-2022-06-04 17:19:47.08 spid17s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:47.08 spid14s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:47.13 spid17s     Starting up database 'mssqlsystemresource'.
-2022-06-04 17:19:47.17 spid34s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
-2022-06-04 17:19:47.20 spid14s     Starting up database 'msdb'.
-2022-06-04 17:19:47.21 spid34s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
-2022-06-04 17:19:47.21 spid17s     The resource database build version is 16.00.600. This is an informational message only. No user action is required.
-2022-06-04 17:19:47.34 spid31s     A self-generated certificate was successfully loaded for encryption.
-2022-06-04 17:19:47.36 spid17s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:47.39 spid17s     Starting up database 'model'.
-2022-06-04 17:19:47.40 spid31s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
-2022-06-04 17:19:47.41 spid31s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
-2022-06-04 17:19:47.41 spid31s     Dedicated administrator connection support was not started because it is disabled on this edition of SQL Server. If you want to use a dedicated administrator connection, restart SQL Server using the trace flag 7806. This is an informational message only. No user action is required.
-2022-06-04 17:19:47.43 spid31s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
-2022-06-04 17:19:47.43 spid31s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
-2022-06-04 17:19:47.45 spid31s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
-2022-06-04 17:19:47.56 spid17s     Clearing tempdb database.
-2022-06-04 17:19:47.71 spid17s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:47.75 spid17s     Starting up database 'tempdb'.
-2022-06-04 17:19:47.89 spid34s     The Service Broker endpoint is in disabled or stopped state.
-2022-06-04 17:19:47.90 Server      Failed to verify the Authenticode signature of 'C:\binn\pidgenx.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.
-2022-06-04 17:19:47.91 spid34s     The Database Mirroring endpoint is in disabled or stopped state.
-2022-06-04 17:19:48.05 spid34s     Service Broker manager has started.
-2022-06-04 17:19:48.08 spid14s     Recovery is complete. This is an informational message only. No user action is required.
-2022-06-04 17:19:48.73 Server      Configuring Always Encrypted enclave in asynchronous mode.
-2022-06-04 17:19:49.85 spid51      [5]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:19:49.87 spid51      Starting up database 'Test'.
-2022-06-04 17:19:49.87 spid51      RemoveStaleDbEntries: Cleanup of stale DB entries called for database ID: [5]
-2022-06-04 17:19:49.88 spid51      RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized.
-2022-06-04 17:19:49.95 spid51      Parallel redo is started for database 'Test' with worker pool size [1].
-2022-06-04 17:19:49.98 spid51      Parallel redo is shutdown for database 'Test' with worker pool size [1].
-2022-06-04 17:19:50.05 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population logic as the database is marked for auto close.
-2022-06-04 17:19:50.19 spid23s     RBPEX::NotifyFileShutdown: Called for database ID: [5], file Id [0]
+2022-06-04 17:22:32.93 Server      SQL Server detected 1 sockets with 2 cores per socket and 2 logical processors per socket, 2 total logical processors; using 2 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2022-06-04 17:22:32.94 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2022-06-04 17:22:32.95 Server      Detected 2957 MB of RAM. This is an informational message; no user action is required.
+2022-06-04 17:22:32.96 Server      Using conventional memory in the memory manager.
+2022-06-04 17:22:32.96 Server      Page exclusion bitmap is enabled.
+2022-06-04 17:22:32.98 Server      Buffer pool extension is not supported on Linux platform.
+2022-06-04 17:22:32.98 Server      Buffer Pool: Allocating 524288 bytes for 353823 hashPages.
+2022-06-04 17:22:33.31 Server      Buffer pool extension is already disabled. No action is necessary.
+2022-06-04 17:22:34.58 Server      Installing Client TLS certificates to the store.
+2022-06-04 17:22:34.60 Server      Error searching first file in /usr/local/share/ca-certificates/mssql-ca-certificates: 3(The system cannot find the path specified.)
+2022-06-04 17:22:34.61 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
+2022-06-04 17:22:34.68 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2022-06-04 17:22:34.73 Server      Query Store settings initialized with enabled = 1, 
+2022-06-04 17:22:34.76 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2022-06-04 17:22:34.76 Server      Node configuration: node 0: CPU mask: 0x0000000000000003:0 Active CPU mask: 0x0000000000000003:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2022-06-04 17:22:34.79 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2022-06-04 17:22:34.83 Server      In-Memory OLTP initialized on lowend machine.
+2022-06-04 17:22:34.88 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2022-06-04 17:22:34.89 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2022-06-04 17:22:34.95 Server      Total Log Writer threads: 1, Node CPUs: 1, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
+2022-06-04 17:22:34.98 Server      clflush is selected for pmem flush operation.
+2022-06-04 17:22:35.00 Server      Software Usage Metrics is disabled.
+2022-06-04 17:22:35.02 Server      CLR version v4.0.30319 loaded.
+2022-06-04 17:22:35.05 spid13s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-04 17:22:35.07 spid13s     Starting up database 'master'.
+2022-06-04 17:22:35.22 spid13s     6 transactions rolled forward in database 'master' (1:0). This is an informational message only. No user action is required.
+2022-06-04 17:22:35.25 spid13s     0 transactions rolled back in database 'master' (1:0). This is an informational message only. No user action is required.
+2022-06-04 17:22:35.26 spid13s     Recovery is writing a checkpoint in database 'master' (1). This is an informational message only. No user action is required.
+2022-06-04 17:22:35.54 spid13s     Service Master Key could not be decrypted using one of its encryptions. See sys.key_encryptions for details.
+2022-06-04 17:22:35.58 spid13s     An error occurred during Service Master Key initialization. SQLErrorCode=33095, State=14, LastOsError=2.
+2022-06-04 17:22:35.65 spid24s     External governance manager initialized
+2022-06-04 17:22:35.64 spid13s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2022-06-04 17:22:35.68 spid24s     Attribute synchronization manager initialized
+2022-06-04 17:22:35.70 spid13s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2022-06-04 17:22:35.73 spid13s     XE session 'system_health' started.
+2022-06-04 17:22:35.78 Server      Common language runtime (CLR) functionality initialized.
+2022-06-04 17:22:35.82 spid13s     SQL Trace ID 1 was started by login "sa".
+2022-06-04 17:22:35.85 spid13s     Server name is 'df677263e1dc'. This is an informational message only. No user action is required.
+2022-06-04 17:22:35.95 spid13s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-04 17:22:35.95 spid17s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-04 17:22:35.98 spid34s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2022-06-04 17:22:36.04 spid17s     Starting up database 'mssqlsystemresource'.
+2022-06-04 17:22:36.05 spid13s     Starting up database 'msdb'.
+2022-06-04 17:22:36.06 spid34s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2022-06-04 17:22:36.10 spid17s     The resource database build version is 16.00.600. This is an informational message only. No user action is required.
+2022-06-04 17:22:36.26 spid17s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-04 17:22:36.30 spid17s     Starting up database 'model'.
+2022-06-04 17:22:36.44 spid17s     Clearing tempdb database.
+2022-06-04 17:22:36.56 spid31s     A self-generated certificate was successfully loaded for encryption.
+2022-06-04 17:22:36.59 spid31s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
+2022-06-04 17:22:36.60 spid31s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
+2022-06-04 17:22:36.62 spid31s     Dedicated administrator connection support was not started because it is disabled on this edition of SQL Server. If you want to use a dedicated administrator connection, restart SQL Server using the trace flag 7806. This is an informational message only. No user action is required.
+2022-06-04 17:22:36.70 spid31s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
+2022-06-04 17:22:36.72 spid31s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
+2022-06-04 17:22:36.74 spid31s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2022-06-04 17:22:36.80 spid17s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-04 17:22:36.84 spid17s     Starting up database 'tempdb'.
+2022-06-04 17:22:36.98 Server      Failed to verify the Authenticode signature of 'C:\binn\pidgenx.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.
+2022-06-04 17:22:37.02 spid34s     The Service Broker endpoint is in disabled or stopped state.
+2022-06-04 17:22:37.03 spid34s     The Database Mirroring endpoint is in disabled or stopped state.
+2022-06-04 17:22:37.06 spid34s     Service Broker manager has started.
+2022-06-04 17:22:37.08 spid13s     Recovery is complete. This is an informational message only. No user action is required.
+2022-06-04 17:22:37.56 Server      Configuring Always Encrypted enclave in asynchronous mode.
+2022-06-04 17:22:37.66 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population as the database lock could not be acquired.
+2022-06-04 17:22:37.67 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population as the database lock could not be acquired.
+2022-06-04 17:23:05.67 spid21s     [DevOpsSnapshotTelemetryTask] Evaluating the background task.

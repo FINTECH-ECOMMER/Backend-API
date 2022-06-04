@@ -15,12 +15,12 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    @Cacheable(value = KEY, key = "#productId", unless = "#result == null")
+    @Cacheable(value = KEY, key = "#productId", condition = "#result !=  null")
     public Product fetchByProductId(BigInteger productId) {
         return productRepository.findByProductId(productId);
     }
 
-    @Cacheable(value = KEY, unless = "#result == null")
+    @Cacheable(value = KEY, condition = "#result !=  null")
     public List<Product> fetchAllProducts() {
         return productRepository.findAll();
     }

@@ -16,13 +16,15 @@ public class VideoService {
     @Autowired
     private VideoRepository videoRepository;
 
-    @Cacheable(value = KEY, key = "#videoId", unless = "#result == null")
+    @Cacheable(value = KEY, key = "#videoId", condition = "#result !=  null")
     public Video fetchVideoById(BigInteger videoId) {
 
-        return videoRepository.findByVideoId(videoId);
+        var video    =  videoRepository.findByVideoId(videoId);
+
+        return  video;
     }
 
-    @Cacheable(value = KEY, unless = "#result == null")
+    @Cacheable(value = KEY, condition = "#result !=  null")
     public List<Video> fetchAllVideos() {
 
         return videoRepository.findAll();
