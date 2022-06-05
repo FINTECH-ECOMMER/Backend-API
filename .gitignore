@@ -100,3 +100,9 @@ build/
 ### VS Code ###
 .vscode/
 .env
+
+
+### Docker Files ###
+./volumes/redis
+./volumes/sqlserver/data
+./volumes/sqlserver/log

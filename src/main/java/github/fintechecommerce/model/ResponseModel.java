@@ -1,15 +1,19 @@
 package github.fintechecommerce.model;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class ResponseModel<ResponseData> {
     private int code = HttpStatus.OK.value();
     private String status = HttpStatus.OK.getReasonPhrase();

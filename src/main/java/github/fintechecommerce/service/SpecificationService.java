@@ -20,7 +20,7 @@ public class SpecificationService {
         return specificationRepository.findAll();
     }
 
-    @Cacheable(value = KEY, key = "#specificationId", unless = "#result == null")
+    @Cacheable(value = KEY, key = "#specificationId", unless = "#result ==  null")
     public Specification fetchSpecificationById(BigInteger specificationId) {
         return specificationRepository.findBySpecificationId(specificationId);
     }
