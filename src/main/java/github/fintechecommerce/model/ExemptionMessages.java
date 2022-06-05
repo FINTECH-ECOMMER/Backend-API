@@ -1,7 +1,7 @@
 package github.fintechecommerce.model;
 
 public enum ExemptionMessages {
-    IllegalArgumentException, JpaSystemException, NullPointerException;
+    IllegalArgumentException, JpaSystemException, NullPointerException, INTERNAL_SERVER_ERROR;
 
     public String getCustomMessage() {
 
@@ -9,6 +9,7 @@ public enum ExemptionMessages {
             case IllegalArgumentException -> "small";
             case JpaSystemException -> "ErrorLog in database";
             case NullPointerException -> "NullPointerException";
+            case INTERNAL_SERVER_ERROR -> "Internal Server Error";
         };
     }
 }

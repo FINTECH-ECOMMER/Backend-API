@@ -15,12 +15,12 @@ public class SpecificationService {
     @Autowired
     private SpecificationRepository specificationRepository;
 
-    @Cacheable(value = KEY, condition = "#result !=  null")
+    @Cacheable(value = KEY, unless = "#result == null")
     public List<Specification> fetchAllSpecifications() {
         return specificationRepository.findAll();
     }
 
-    @Cacheable(value = KEY, key = "#specificationId", condition = "#result !=  null")
+    @Cacheable(value = KEY, key = "#specificationId", unless = "#result ==  null")
     public Specification fetchSpecificationById(BigInteger specificationId) {
         return specificationRepository.findBySpecificationId(specificationId);
     }

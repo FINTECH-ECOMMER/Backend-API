@@ -21,5 +21,4 @@ public class ErrorLog {
     String message;
     String systemMessage;
     String url;
-
 }

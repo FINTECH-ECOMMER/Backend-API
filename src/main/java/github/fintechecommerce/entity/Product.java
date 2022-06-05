@@ -64,7 +64,7 @@ public class Product implements Serializable {
                     {@JoinColumn(name = "specification_id", referencedColumnName = "specification_id")})
     private Specification specification;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinTable(name = "product_video",
             joinColumns =
                     {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
