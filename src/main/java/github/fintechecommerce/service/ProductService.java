@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -17,7 +18,12 @@ public class ProductService {
 
     @Cacheable(value = KEY, key = "#productId", unless = "#result == null")
     public Product fetchByProductId(BigInteger productId) {
-        return productRepository.findByProductId(productId);
+        var product = productRepository.findByProductId(productId);
+
+        if (product == null) {
+            throw new RuntimeException("Unexpected result");
+        }
+        return (Product) product;
     }
 
     @Cacheable(value = KEY, unless = "#result == null")

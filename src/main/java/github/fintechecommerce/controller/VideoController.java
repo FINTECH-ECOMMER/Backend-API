@@ -3,6 +3,7 @@ package github.fintechecommerce.controller;
 import github.fintechecommerce.entity.Video;
 import github.fintechecommerce.model.ResponseModel;
 import github.fintechecommerce.service.VideoService;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ public class VideoController {
     }
 
     @GetMapping({"/{id}", "/{id}/"})
-    public ResponseModel<Video> getVideo(@PathVariable("id") BigInteger videoId) {
+    public ResponseModel<Video> getVideo(@NonNull @PathVariable("id") BigInteger videoId) {
 
         return new ResponseModel<>(videoService.fetchVideoById(videoId));
     }

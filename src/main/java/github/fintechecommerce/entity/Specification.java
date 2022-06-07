@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +29,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Table(name = "specifications")
-@SQLDelete(sql = "UPDATE specification SET deleted=true WHERE specification_id=?")
+@SQLDelete(sql = "UPDATE specification SET deleted=1 WHERE specification_id=?")
+@Where(clause = "deleted=0")
 public class Specification implements Serializable {
 
     @Id

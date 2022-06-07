@@ -1,127 +1,332 @@
-2022-06-04 17:29:24.17 Server      Microsoft SQL Server 2022 (CTP2.0) - 16.0.600.9 (X64) 
+2022-06-07 10:21:07.97 Server      Microsoft SQL Server 2022 (CTP2.0) - 16.0.600.9 (X64) 
 	May 20 2022 13:29:42 
 	Copyright (C) 2022 Microsoft Corporation
 	Developer Edition (64-bit) on Linux (Ubuntu 20.04.4 LTS) <X64>
-2022-06-04 17:29:24.17 Server      UTC adjustment: 0:00
-2022-06-04 17:29:24.17 Server      (c) Microsoft Corporation.
-2022-06-04 17:29:24.18 Server      All rights reserved.
-2022-06-04 17:29:24.18 Server      Server process ID is 480.
-2022-06-04 17:29:24.18 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
-2022-06-04 17:29:24.19 Server      Registry startup parameters: 
+2022-06-07 10:21:07.98 Server      UTC adjustment: 0:00
+2022-06-07 10:21:07.98 Server      (c) Microsoft Corporation.
+2022-06-07 10:21:07.99 Server      All rights reserved.
+2022-06-07 10:21:07.99 Server      Server process ID is 492.
+2022-06-07 10:21:07.99 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2022-06-07 10:21:08.00 Server      Registry startup parameters: 
 	 -d /var/opt/mssql/data/master.mdf
 	 -l /var/opt/mssql/data/mastlog.ldf
 	 -e /var/opt/mssql/log/errorlog
-2022-06-04 17:29:24.20 Server      SQL Server detected 1 sockets with 2 cores per socket and 2 logical processors per socket, 2 total logical processors; using 2 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
-2022-06-04 17:29:24.21 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
-2022-06-04 17:29:24.22 Server      Detected 2957 MB of RAM. This is an informational message; no user action is required.
-2022-06-04 17:29:24.23 Server      Using conventional memory in the memory manager.
-2022-06-04 17:29:24.23 Server      Page exclusion bitmap is enabled.
-2022-06-04 17:29:24.25 Server      Buffer pool extension is not supported on Linux platform.
-2022-06-04 17:29:24.26 Server      Buffer Pool: Allocating 524288 bytes for 356180 hashPages.
-2022-06-04 17:29:24.59 Server      Buffer pool extension is already disabled. No action is necessary.
-2022-06-04 17:29:25.85 Server      Installing Client TLS certificates to the store.
-2022-06-04 17:29:25.87 Server      Error searching first file in /usr/local/share/ca-certificates/mssql-ca-certificates: 3(The system cannot find the path specified.)
-2022-06-04 17:29:25.88 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
-2022-06-04 17:29:25.95 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
-2022-06-04 17:29:25.99 Server      Query Store settings initialized with enabled = 1, 
-2022-06-04 17:29:26.00 Server      The maximum number of dedicated administrator connections for this instance is '1'
-2022-06-04 17:29:26.03 Server      Node configuration: node 0: CPU mask: 0x0000000000000003:0 Active CPU mask: 0x0000000000000003:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
-2022-06-04 17:29:26.07 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
-2022-06-04 17:29:26.12 Server      In-Memory OLTP initialized on lowend machine.
-2022-06-04 17:29:26.17 Server      CLR version v4.0.30319 loaded.
-2022-06-04 17:29:26.20 Server      [INFO] Created Extended Events session 'hkenginexesession'
-2022-06-04 17:29:26.22 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-2022-06-04 17:29:26.29 Server      Total Log Writer threads: 1, Node CPUs: 1, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
-2022-06-04 17:29:26.32 Server      clflush is selected for pmem flush operation.
-2022-06-04 17:29:26.34 Server      Software Usage Metrics is disabled.
-2022-06-04 17:29:26.37 spid14s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:26.38 spid14s     Starting up database 'master'.
-2022-06-04 17:29:26.58 spid14s     20 transactions rolled forward in database 'master' (1:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:26.61 spid14s     0 transactions rolled back in database 'master' (1:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:26.63 spid14s     Recovery is writing a checkpoint in database 'master' (1). This is an informational message only. No user action is required.
-2022-06-04 17:29:26.77 Server      Common language runtime (CLR) functionality initialized.
-2022-06-04 17:29:26.89 spid14s     Service Master Key could not be decrypted using one of its encryptions. See sys.key_encryptions for details.
-2022-06-04 17:29:26.92 spid14s     An error occurred during Service Master Key initialization. SQLErrorCode=33095, State=14, LastOsError=2.
-2022-06-04 17:29:26.95 spid14s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:26.96 spid17s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:27.01 spid14s     Starting up database 'model_replicatedmaster'.
-2022-06-04 17:29:27.02 spid17s     Starting up database 'mssqlsystemresource'.
-2022-06-04 17:29:27.06 spid17s     The resource database build version is 16.00.600. This is an informational message only. No user action is required.
-2022-06-04 17:29:27.18 spid17s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:27.20 spid17s     Starting up database 'model'.
-2022-06-04 17:29:27.24 spid14s     3 transactions rolled forward in database 'model_replicatedmaster' (32762:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.29 spid14s     0 transactions rolled back in database 'model_replicatedmaster' (32762:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.33 spid14s     Recovery is writing a checkpoint in database 'model_replicatedmaster' (32762). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.43 spid14s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:27.47 spid14s     Starting up database 'model_msdb'.
-2022-06-04 17:29:27.54 spid23s     A self-generated certificate was successfully loaded for encryption.
-2022-06-04 17:29:27.56 spid23s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
-2022-06-04 17:29:27.58 spid23s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
-2022-06-04 17:29:27.59 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
-2022-06-04 17:29:27.61 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
-2022-06-04 17:29:27.62 Server      Dedicated admin connection support was established for listening locally on port 1434.
-2022-06-04 17:29:27.65 spid23s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
-2022-06-04 17:29:27.67 spid23s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
-2022-06-04 17:29:27.68 spid23s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
-2022-06-04 17:29:27.72 spid14s     258 transactions rolled forward in database 'model_msdb' (32761:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.74 spid14s     0 transactions rolled back in database 'model_msdb' (32761:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.76 spid14s     Recovery is writing a checkpoint in database 'model_msdb' (32761). This is an informational message only. No user action is required.
-2022-06-04 17:29:27.82 spid25s     External governance manager initialized
-2022-06-04 17:29:27.83 spid25s     Attribute synchronization manager initialized
-2022-06-04 17:29:27.85 spid14s     Resource governor reconfiguration succeeded.
-2022-06-04 17:29:27.86 spid14s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
-2022-06-04 17:29:27.88 spid14s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
-2022-06-04 17:29:27.91 spid14s     XE session 'system_health' started.
-2022-06-04 17:29:27.97 spid14s     SQL Trace ID 1 was started by login "sa".
-2022-06-04 17:29:28.00 spid14s     Server name is 'df677263e1dc'. This is an informational message only. No user action is required.
-2022-06-04 17:29:28.05 spid36s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
-2022-06-04 17:29:28.07 spid17s     Clearing tempdb database.
-2022-06-04 17:29:28.06 spid38s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:28.09 spid38s     Starting up database 'msdb'.
-2022-06-04 17:29:28.08 spid36s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
-2022-06-04 17:29:28.31 spid38s     1 transactions rolled forward in database 'msdb' (4:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:28.36 spid14s     0 transactions rolled back in database 'msdb' (4:0). This is an informational message only. No user action is required.
-2022-06-04 17:29:28.37 Server      Failed to verify the Authenticode signature of 'C:\binn\pidgenx.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.
-2022-06-04 17:29:28.41 spid17s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:28.46 spid17s     Starting up database 'tempdb'.
-2022-06-04 17:29:28.60 spid17s     The tempdb database has 1 data file(s).
-2022-06-04 17:29:28.61 spid36s     The Service Broker endpoint is in disabled or stopped state.
-2022-06-04 17:29:28.63 spid36s     The Database Mirroring endpoint is in disabled or stopped state.
-2022-06-04 17:29:28.66 spid14s     Recovery is complete. This is an informational message only. No user action is required.
-2022-06-04 17:29:28.69 spid36s     Service Broker manager has started.
-2022-06-04 17:29:29.01 Server      Configuring Always Encrypted enclave in asynchronous mode.
-2022-06-04 17:29:29.17 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population as the database lock could not be acquired.
-2022-06-04 17:29:29.43 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population as the database lock could not be acquired.
-2022-06-04 17:29:35.47 spid51      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
-2022-06-04 17:29:35.51 spid51      Using 'xplog70.dll' version '2022.160.600' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
-2022-06-04 17:29:35.83 spid51      [5]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:29:35.85 spid51      Starting up database 'Test'.
-2022-06-04 17:29:35.87 spid51      RemoveStaleDbEntries: Cleanup of stale DB entries called for database ID: [5]
-2022-06-04 17:29:35.88 spid51      RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized.
-2022-06-04 17:29:35.97 spid51      Parallel redo is started for database 'Test' with worker pool size [1].
-2022-06-04 17:29:36.00 spid51      Parallel redo is shutdown for database 'Test' with worker pool size [1].
-2022-06-04 17:29:36.05 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population logic as the database is marked for auto close.
-2022-06-04 17:29:36.18 spid28s     RBPEX::NotifyFileShutdown: Called for database ID: [5], file Id [0]
-2022-06-04 17:30:45.49 spid53      [5]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2022-06-04 17:30:45.51 spid53      Starting up database 'Test'.
-2022-06-04 17:30:45.51 spid53      RemoveStaleDbEntries: Cleanup of stale DB entries called for database ID: [5]
-2022-06-04 17:30:45.52 spid53      RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized.
-2022-06-04 17:30:45.60 spid53      Parallel redo is started for database 'Test' with worker pool size [1].
-2022-06-04 17:30:45.63 spid53      Parallel redo is shutdown for database 'Test' with worker pool size [1].
-2022-06-04 17:30:45.64 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:45.65 spid10s     [PopulateOrdLockForSysRsCols][DbId:5] Skipping population logic as the database is marked for auto close.
-2022-06-04 17:30:46.32 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:46.71 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:46.95 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:53.69 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:54.11 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:54.41 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:58.87 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:59.20 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:59.40 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:59.66 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:30:59.84 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:31:00.01 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:31:00.19 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:31:00.41 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
-2022-06-04 17:31:00.59 spid53      Setting database option AUTO_CLOSE to OFF for database 'test'.
+2022-06-07 10:21:08.04 Server      SQL Server detected 1 sockets with 4 cores per socket and 8 logical processors per socket, 8 total logical processors; using 8 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2022-06-07 10:21:08.05 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2022-06-07 10:21:08.06 Server      Detected 6315 MB of RAM. This is an informational message; no user action is required.
+2022-06-07 10:21:08.06 Server      Using conventional memory in the memory manager.
+2022-06-07 10:21:08.07 Server      Page exclusion bitmap is enabled.
+2022-06-07 10:21:08.11 Server      Buffer pool extension is not supported on Linux platform.
+2022-06-07 10:21:08.12 Server      Buffer Pool: Allocating 1048576 bytes for 896985 hashPages.
+2022-06-07 10:21:08.51 Server      Buffer pool extension is already disabled. No action is necessary.
+2022-06-07 10:21:09.96 Server      Installing Client TLS certificates to the store.
+2022-06-07 10:21:09.98 Server      Error searching first file in /usr/local/share/ca-certificates/mssql-ca-certificates: 3(The system cannot find the path specified.)
+2022-06-07 10:21:09.99 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
+2022-06-07 10:21:10.10 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2022-06-07 10:21:10.16 Server      Query Store settings initialized with enabled = 1, 
+2022-06-07 10:21:10.18 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2022-06-07 10:21:10.20 Server      Node configuration: node 0: CPU mask: 0x00000000000000ff:0 Active CPU mask: 0x00000000000000ff:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2022-06-07 10:21:10.23 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2022-06-07 10:21:10.27 Server      In-Memory OLTP initialized on lowend machine.
+2022-06-07 10:21:10.32 Server      CLR version v4.0.30319 loaded.
+2022-06-07 10:21:10.43 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2022-06-07 10:21:10.43 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2022-06-07 10:21:10.46 Server      Total Log Writer threads: 2, Node CPUs: 4, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
+2022-06-07 10:21:10.48 Server      clflushopt is selected for pmem flush operation.
+2022-06-07 10:21:10.49 Server      Software Usage Metrics is disabled.
+2022-06-07 10:21:10.50 spid27s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:10.52 spid27s     Starting up database 'master'.
+2022-06-07 10:21:10.73 Server      Common language runtime (CLR) functionality initialized.
+2022-06-07 10:21:11.37 Server      Failed to verify the Authenticode signature of 'C:\binn\pidgenx.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.
+2022-06-07 10:21:11.57 spid27s     The tail of the log for database master is being rewritten to match the new sector size of 4096 bytes.  2560 bytes at offset 390656 in file /var/opt/mssql/data/mastlog.ldf will be written.
+2022-06-07 10:21:11.70 spid27s     Converting database 'master' from version 927 to the current version 950.
+2022-06-07 10:21:11.70 spid27s     Database 'master' running the upgrade step from version 927 to version 928.
+2022-06-07 10:21:11.76 Server      Configuring Always Encrypted enclave in asynchronous mode.
+2022-06-07 10:21:11.77 spid27s     Database 'master' running the upgrade step from version 928 to version 929.
+2022-06-07 10:21:11.96 spid27s     Database 'master' running the upgrade step from version 929 to version 930.
+2022-06-07 10:21:11.99 spid27s     Database 'master' running the upgrade step from version 930 to version 931.
+2022-06-07 10:21:12.01 spid27s     Database 'master' running the upgrade step from version 931 to version 932.
+2022-06-07 10:21:12.04 spid27s     Database 'master' running the upgrade step from version 932 to version 933.
+2022-06-07 10:21:12.06 spid27s     Database 'master' running the upgrade step from version 933 to version 934.
+2022-06-07 10:21:12.09 spid27s     Database 'master' running the upgrade step from version 934 to version 935.
+2022-06-07 10:21:12.25 spid27s     Database 'master' running the upgrade step from version 935 to version 936.
+2022-06-07 10:21:12.27 spid27s     Database 'master' running the upgrade step from version 936 to version 937.
+2022-06-07 10:21:12.29 spid27s     Database 'master' running the upgrade step from version 937 to version 938.
+2022-06-07 10:21:12.43 spid27s     Database 'master' running the upgrade step from version 938 to version 939.
+2022-06-07 10:21:12.45 spid27s     Database 'master' running the upgrade step from version 939 to version 940.
+2022-06-07 10:21:12.47 spid27s     Database 'master' running the upgrade step from version 940 to version 941.
+2022-06-07 10:21:12.49 spid27s     Database 'master' running the upgrade step from version 941 to version 942.
+2022-06-07 10:21:12.52 spid27s     Database 'master' running the upgrade step from version 942 to version 943.
+2022-06-07 10:21:12.69 spid27s     Database 'master' running the upgrade step from version 943 to version 944.
+2022-06-07 10:21:12.71 spid27s     Database 'master' running the upgrade step from version 944 to version 945.
+2022-06-07 10:21:12.74 spid27s     Database 'master' running the upgrade step from version 945 to version 946.
+2022-06-07 10:21:12.78 spid27s     Database 'master' running the upgrade step from version 946 to version 947.
+2022-06-07 10:21:12.80 spid27s     Database 'master' running the upgrade step from version 947 to version 948.
+2022-06-07 10:21:12.82 spid27s     Database 'master' running the upgrade step from version 948 to version 949.
+2022-06-07 10:21:12.84 spid27s     Database 'master' running the upgrade step from version 949 to version 950.
+2022-06-07 10:21:13.05 spid30s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:13.06 spid30s     Starting up database 'mssqlsystemresource'.
+2022-06-07 10:21:13.07 spid30s     The resource database build version is 16.00.600. This is an informational message only. No user action is required.
+2022-06-07 10:21:13.08 spid38s     Password policy update was successful.
+2022-06-07 10:21:13.14 spid30s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:13.16 spid30s     Starting up database 'model'.
+2022-06-07 10:21:13.45 spid38s     A self-generated certificate was successfully loaded for encryption.
+2022-06-07 10:21:13.46 spid38s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
+2022-06-07 10:21:13.47 spid38s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
+2022-06-07 10:21:13.48 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
+2022-06-07 10:21:13.48 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
+2022-06-07 10:21:13.49 Server      Dedicated admin connection support was established for listening locally on port 1434.
+2022-06-07 10:21:13.50 spid38s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
+2022-06-07 10:21:13.51 spid38s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
+2022-06-07 10:21:13.51 spid38s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2022-06-07 10:21:13.89 spid27s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:13.89 spid27s     Starting up database 'model_replicatedmaster'.
+2022-06-07 10:21:14.40 spid30s     The tail of the log for database model is being rewritten to match the new sector size of 4096 bytes.  1024 bytes at offset 72704 in file /var/opt/mssql/data/modellog.ldf will be written.
+2022-06-07 10:21:14.49 spid30s     Converting database 'model' from version 927 to the current version 950.
+2022-06-07 10:21:14.49 spid30s     Database 'model' running the upgrade step from version 927 to version 928.
+2022-06-07 10:21:14.53 spid30s     Database 'model' running the upgrade step from version 928 to version 929.
+2022-06-07 10:21:14.61 spid30s     Database 'model' running the upgrade step from version 929 to version 930.
+2022-06-07 10:21:14.64 spid30s     Database 'model' running the upgrade step from version 930 to version 931.
+2022-06-07 10:21:14.66 spid30s     Database 'model' running the upgrade step from version 931 to version 932.
+2022-06-07 10:21:14.69 spid30s     Database 'model' running the upgrade step from version 932 to version 933.
+2022-06-07 10:21:14.71 spid30s     Database 'model' running the upgrade step from version 933 to version 934.
+2022-06-07 10:21:14.73 spid30s     Database 'model' running the upgrade step from version 934 to version 935.
+2022-06-07 10:21:14.76 spid30s     Database 'model' running the upgrade step from version 935 to version 936.
+2022-06-07 10:21:14.78 spid30s     Database 'model' running the upgrade step from version 936 to version 937.
+2022-06-07 10:21:14.80 spid30s     Database 'model' running the upgrade step from version 937 to version 938.
+2022-06-07 10:21:14.82 spid30s     Database 'model' running the upgrade step from version 938 to version 939.
+2022-06-07 10:21:14.85 spid30s     Database 'model' running the upgrade step from version 939 to version 940.
+2022-06-07 10:21:14.87 spid30s     Database 'model' running the upgrade step from version 940 to version 941.
+2022-06-07 10:21:14.89 spid30s     Database 'model' running the upgrade step from version 941 to version 942.
+2022-06-07 10:21:14.91 spid30s     Database 'model' running the upgrade step from version 942 to version 943.
+2022-06-07 10:21:14.95 spid30s     Database 'model' running the upgrade step from version 943 to version 944.
+2022-06-07 10:21:14.97 spid30s     Database 'model' running the upgrade step from version 944 to version 945.
+2022-06-07 10:21:15.00 spid30s     Database 'model' running the upgrade step from version 945 to version 946.
+2022-06-07 10:21:15.02 spid30s     Database 'model' running the upgrade step from version 946 to version 947.
+2022-06-07 10:21:15.04 spid30s     Database 'model' running the upgrade step from version 947 to version 948.
+2022-06-07 10:21:15.07 spid30s     Database 'model' running the upgrade step from version 948 to version 949.
+2022-06-07 10:21:15.09 spid30s     Database 'model' running the upgrade step from version 949 to version 950.
+2022-06-07 10:21:15.18 spid27s     The tail of the log for database model_replicatedmaster is being rewritten to match the new sector size of 4096 bytes.  2560 bytes at offset 99840 in file /var/opt/mssql/data/model_replicatedmaster.ldf will be written.
+2022-06-07 10:21:15.22 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.22 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.24 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.24 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.27 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.27 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.29 spid27s     Converting database 'model_replicatedmaster' from version 927 to the current version 950.
+2022-06-07 10:21:15.29 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 927 to version 928.
+2022-06-07 10:21:15.30 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.30 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.32 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 928 to version 929.
+2022-06-07 10:21:15.34 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.34 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.37 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.37 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.40 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.40 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.41 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 929 to version 930.
+2022-06-07 10:21:15.43 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.43 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.46 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.46 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.49 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.49 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.53 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.53 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.56 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.56 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.60 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.60 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.64 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.64 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.64 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 930 to version 931.
+2022-06-07 10:21:15.67 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.67 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.68 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 931 to version 932.
+2022-06-07 10:21:15.72 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 932 to version 933.
+2022-06-07 10:21:15.72 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.72 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.76 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 933 to version 934.
+2022-06-07 10:21:15.77 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.77 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.80 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 934 to version 935.
+2022-06-07 10:21:15.81 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.81 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.83 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 935 to version 936.
+2022-06-07 10:21:15.86 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.86 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.86 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 936 to version 937.
+2022-06-07 10:21:15.90 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.90 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.90 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 937 to version 938.
+2022-06-07 10:21:15.94 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.94 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:15.94 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 938 to version 939.
+2022-06-07 10:21:15.98 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 939 to version 940.
+2022-06-07 10:21:15.98 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:15.98 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.01 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 940 to version 941.
+2022-06-07 10:21:16.02 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.02 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.05 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 941 to version 942.
+2022-06-07 10:21:16.06 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.06 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.07 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 942 to version 943.
+2022-06-07 10:21:16.11 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.11 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.15 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.15 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.18 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.18 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.22 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.22 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.26 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.26 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.30 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.30 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.34 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.34 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.37 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.37 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.41 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.41 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.44 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.44 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.48 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.48 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.51 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 943 to version 944.
+2022-06-07 10:21:16.52 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.52 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.54 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 944 to version 945.
+2022-06-07 10:21:16.56 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.56 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.59 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 945 to version 946.
+2022-06-07 10:21:16.60 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.60 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.62 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 946 to version 947.
+2022-06-07 10:21:16.64 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.64 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.65 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 947 to version 948.
+2022-06-07 10:21:16.68 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 948 to version 949.
+2022-06-07 10:21:16.69 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.69 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.72 spid27s     Database 'model_replicatedmaster' running the upgrade step from version 949 to version 950.
+2022-06-07 10:21:16.73 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.73 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.77 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.77 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.85 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.85 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.90 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.90 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.92 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.92 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:16.96 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:16.96 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.01 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.01 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.05 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.05 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.09 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.09 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.13 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.13 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.18 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.18 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.23 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.23 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.28 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.28 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.32 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.32 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.36 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.36 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.41 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.41 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.45 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.45 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.49 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.49 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.53 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.53 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:17.57 Logon       Error: 18456, Severity: 14, State: 7.
+2022-06-07 10:21:17.57 Logon       Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 172.18.0.3]
+2022-06-07 10:21:18.05 spid27s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:18.05 spid27s     Starting up database 'model_msdb'.
+2022-06-07 10:21:19.33 spid27s     The tail of the log for database model_msdb is being rewritten to match the new sector size of 4096 bytes.  1536 bytes at offset 51712 in file /var/opt/mssql/data/model_msdblog.ldf will be written.
+2022-06-07 10:21:19.45 spid27s     Converting database 'model_msdb' from version 927 to the current version 950.
+2022-06-07 10:21:19.45 spid27s     Database 'model_msdb' running the upgrade step from version 927 to version 928.
+2022-06-07 10:21:19.47 spid27s     Database 'model_msdb' running the upgrade step from version 928 to version 929.
+2022-06-07 10:21:19.60 spid27s     Database 'model_msdb' running the upgrade step from version 929 to version 930.
+2022-06-07 10:21:19.64 spid27s     Database 'model_msdb' running the upgrade step from version 930 to version 931.
+2022-06-07 10:21:19.66 spid27s     Database 'model_msdb' running the upgrade step from version 931 to version 932.
+2022-06-07 10:21:19.68 spid27s     Database 'model_msdb' running the upgrade step from version 932 to version 933.
+2022-06-07 10:21:19.89 spid27s     Database 'model_msdb' running the upgrade step from version 933 to version 934.
+2022-06-07 10:21:19.91 spid27s     Database 'model_msdb' running the upgrade step from version 934 to version 935.
+2022-06-07 10:21:19.93 spid27s     Database 'model_msdb' running the upgrade step from version 935 to version 936.
+2022-06-07 10:21:19.95 spid27s     Database 'model_msdb' running the upgrade step from version 936 to version 937.
+2022-06-07 10:21:19.98 spid27s     Database 'model_msdb' running the upgrade step from version 937 to version 938.
+2022-06-07 10:21:20.00 spid27s     Database 'model_msdb' running the upgrade step from version 938 to version 939.
+2022-06-07 10:21:20.03 spid27s     Database 'model_msdb' running the upgrade step from version 939 to version 940.
+2022-06-07 10:21:20.05 spid27s     Database 'model_msdb' running the upgrade step from version 940 to version 941.
+2022-06-07 10:21:20.08 spid27s     Database 'model_msdb' running the upgrade step from version 941 to version 942.
+2022-06-07 10:21:20.10 spid27s     Database 'model_msdb' running the upgrade step from version 942 to version 943.
+2022-06-07 10:21:20.28 spid27s     Database 'model_msdb' running the upgrade step from version 943 to version 944.
+2022-06-07 10:21:20.30 spid27s     Database 'model_msdb' running the upgrade step from version 944 to version 945.
+2022-06-07 10:21:20.46 spid27s     Database 'model_msdb' running the upgrade step from version 945 to version 946.
+2022-06-07 10:21:20.48 spid27s     Database 'model_msdb' running the upgrade step from version 946 to version 947.
+2022-06-07 10:21:20.50 spid27s     Database 'model_msdb' running the upgrade step from version 947 to version 948.
+2022-06-07 10:21:20.52 spid27s     Database 'model_msdb' running the upgrade step from version 948 to version 949.
+2022-06-07 10:21:20.55 spid27s     Database 'model_msdb' running the upgrade step from version 949 to version 950.
+2022-06-07 10:21:20.68 spid27s     Resource governor reconfiguration succeeded.
+2022-06-07 10:21:20.68 spid40s     External governance manager initialized
+2022-06-07 10:21:20.69 spid27s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2022-06-07 10:21:20.69 spid40s     Attribute synchronization manager initialized
+2022-06-07 10:21:20.70 spid27s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2022-06-07 10:21:20.71 spid27s     XE session 'system_health' started.
+2022-06-07 10:21:20.93 spid27s     SQL Trace ID 1 was started by login "sa".
+2022-06-07 10:21:21.07 spid27s     Server name is 'a42ef84df21f'. This is an informational message only. No user action is required.
+2022-06-07 10:21:21.10 spid30s     Clearing tempdb database.
+2022-06-07 10:21:21.10 spid71s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2022-06-07 10:21:21.11 spid70s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:21.12 spid71s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2022-06-07 10:21:21.12 spid70s     Starting up database 'msdb'.
+2022-06-07 10:21:22.52 spid70s     The tail of the log for database msdb is being rewritten to match the new sector size of 4096 bytes.  1536 bytes at offset 51712 in file /var/opt/mssql/data/MSDBLog.ldf will be written.
+2022-06-07 10:21:22.63 spid70s     Converting database 'msdb' from version 927 to the current version 950.
+2022-06-07 10:21:22.63 spid70s     Database 'msdb' running the upgrade step from version 927 to version 928.
+2022-06-07 10:21:22.66 spid70s     Database 'msdb' running the upgrade step from version 928 to version 929.
+2022-06-07 10:21:22.80 spid70s     Database 'msdb' running the upgrade step from version 929 to version 930.
+2022-06-07 10:21:22.84 spid70s     Database 'msdb' running the upgrade step from version 930 to version 931.
+2022-06-07 10:21:22.86 spid70s     Database 'msdb' running the upgrade step from version 931 to version 932.
+2022-06-07 10:21:22.88 spid70s     Database 'msdb' running the upgrade step from version 932 to version 933.
+2022-06-07 10:21:23.09 spid70s     Database 'msdb' running the upgrade step from version 933 to version 934.
+2022-06-07 10:21:23.12 spid70s     Database 'msdb' running the upgrade step from version 934 to version 935.
+2022-06-07 10:21:23.14 spid70s     Database 'msdb' running the upgrade step from version 935 to version 936.
+2022-06-07 10:21:23.16 spid70s     Database 'msdb' running the upgrade step from version 936 to version 937.
+2022-06-07 10:21:23.19 spid70s     Database 'msdb' running the upgrade step from version 937 to version 938.
+2022-06-07 10:21:23.21 spid70s     Database 'msdb' running the upgrade step from version 938 to version 939.
+2022-06-07 10:21:23.24 spid70s     Database 'msdb' running the upgrade step from version 939 to version 940.
+2022-06-07 10:21:23.27 spid70s     Database 'msdb' running the upgrade step from version 940 to version 941.
+2022-06-07 10:21:23.30 spid70s     Database 'msdb' running the upgrade step from version 941 to version 942.
+2022-06-07 10:21:23.33 spid70s     Database 'msdb' running the upgrade step from version 942 to version 943.
+2022-06-07 10:21:23.58 spid70s     Database 'msdb' running the upgrade step from version 943 to version 944.
+2022-06-07 10:21:23.60 spid70s     Database 'msdb' running the upgrade step from version 944 to version 945.
+2022-06-07 10:21:23.78 spid70s     Database 'msdb' running the upgrade step from version 945 to version 946.
+2022-06-07 10:21:23.81 spid70s     Database 'msdb' running the upgrade step from version 946 to version 947.
+2022-06-07 10:21:23.84 spid70s     Database 'msdb' running the upgrade step from version 947 to version 948.
+2022-06-07 10:21:23.87 spid70s     Database 'msdb' running the upgrade step from version 948 to version 949.
+2022-06-07 10:21:23.90 spid70s     Database 'msdb' running the upgrade step from version 949 to version 950.
+2022-06-07 10:21:24.46 spid30s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-07 10:21:24.47 spid30s     Starting up database 'tempdb'.
+2022-06-07 10:21:25.51 spid28s     Using 'dbghelp.dll' version '4.0.5'
+2022-06-07 10:21:25.80 spid30s     The tempdb database has 1 data file(s).
+2022-06-07 10:21:25.82 spid70s     The Service Broker endpoint is in disabled or stopped state.
+2022-06-07 10:21:25.82 spid70s     The Database Mirroring endpoint is in disabled or stopped state.
+2022-06-07 10:21:25.86 spid27s     Recovery is complete. This is an informational message only. No user action is required.
+2022-06-07 10:21:25.86 spid70s     Service Broker manager has started.
+2022-06-07 10:21:25.89 spid36s     The default language (LCID 0) has been set for engine and full-text services.
+2022-06-07 10:21:34.64 spid36s     The tempdb database has 8 data file(s).
+2022-06-07 10:22:02.61 Logon       Error: 18456, Severity: 14, State: 38.
+2022-06-07 10:22:02.61 Logon       Login failed for user 'sa'. Reason: Failed to open the explicitly specified database 'Test'. [CLIENT: 172.18.0.1]
+2022-06-07 10:22:12.67 Logon       Error: 18456, Severity: 14, State: 38.
+2022-06-07 10:22:12.67 Logon       Login failed for user 'sa'. Reason: Failed to open the explicitly specified database 'Test'. [CLIENT: 172.18.0.1]

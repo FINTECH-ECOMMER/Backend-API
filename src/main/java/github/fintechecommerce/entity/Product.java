@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -19,7 +20,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "products")
-@SQLDelete(sql = "UPDATE products SET deleted=true WHERE product_id=?")
+@SQLDelete(sql = "UPDATE products SET deleted=1 WHERE product_id=?")
+@Where(clause = "deleted=0")
 public class Product implements Serializable {
 
     @Id
