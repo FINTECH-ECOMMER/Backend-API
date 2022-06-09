@@ -26,7 +26,7 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
 //
 //    }
 
-    @ExceptionHandler(value = {NullPointerException.class,InterruptedException.class})
+    @ExceptionHandler(value = {NullPointerException.class,InterruptedException.class,RuntimeException.class,OutOfMemoryError.class})
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     protected @ResponseBody ResponseModel<ErrorLog> handleNullPointerException(Exception ex, WebRequest request) {
 

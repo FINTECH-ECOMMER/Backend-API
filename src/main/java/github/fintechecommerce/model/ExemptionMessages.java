@@ -9,7 +9,7 @@ public enum ExemptionMessages {
             case IllegalArgumentException -> "Conflict";
             case BAD_GATEWAY -> "ErrorLog in database";
             case NullPointerException -> "No Data Returned";
-            case INTERNAL_SERVER_ERROR -> "Internal Server Error";
+            case INTERNAL_SERVER_ERROR -> "Internal Server Error!!!";
 
         };
     }
