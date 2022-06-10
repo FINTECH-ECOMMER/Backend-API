@@ -91,9 +91,6 @@ build/
 
 
 ### Docker Files ###
-./volumes/redis
-./volumes/sqlserver/data
-./volumes/sqlserver/log
-
-### Docker Files ###
-!./volumes/sqlserver/data/Test.mdf
+./volumes/redis/
+./volumes/sqlserver/data/
+./volumes/sqlserver/log/
