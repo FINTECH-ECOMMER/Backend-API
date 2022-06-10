@@ -91,6 +91,6 @@ build/
 
 
 ### Docker Files ###
-./volumes/redis/*
-./volumes/sqlserver/data/*
-./volumes/sqlserver/log/*
+./volumes/redis/
+./volumes/sqlserver/data/
+./volumes/sqlserver/log/
