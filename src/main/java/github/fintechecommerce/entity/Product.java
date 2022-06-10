@@ -14,6 +14,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -73,4 +75,8 @@ public class Product implements Serializable {
             inverseJoinColumns =
                     {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
     private Video video;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "products",targetEntity = Image.class)
+    @JoinColumn(name = "product_id")
+    private List<Image> productImages;
 }
