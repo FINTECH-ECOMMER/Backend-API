@@ -1,12 +1,11 @@
 version: "3"
 services:
   backend-db:
-#    image: mcr.microsoft.com/mssql/server:2022-latest
     build:
       context: ./docker/db
       dockerfile: .
     user: root
-    restart: on-failure
+    restart: unless-stopped
     environment:
       SA_PASSWORD: "${DB_PASSWORD}"
       ACCEPT_EULA: "Y"
@@ -26,7 +25,7 @@ services:
     environment:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
     volumes:
-      - './volume/redis:/data'
+      - './volumes/redis:/data'
     ports:
       - "${REDIS_PORT}:6379"
     networks:

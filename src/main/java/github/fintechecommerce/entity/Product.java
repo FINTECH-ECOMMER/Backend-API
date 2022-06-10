@@ -7,19 +7,23 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "products")
-@SQLDelete(sql = "UPDATE products SET deleted=true WHERE product_id=?")
+@SQLDelete(sql = "UPDATE products SET deleted=1 WHERE product_id=?")
+@Where(clause = "deleted=0")
 public class Product implements Serializable {
 
     @Id
@@ -71,4 +75,8 @@ public class Product implements Serializable {
             inverseJoinColumns =
                     {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
     private Video video;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "products",targetEntity = Image.class)
+    @JoinColumn(name = "product_id")
+    private List<Image> productImages;
 }
