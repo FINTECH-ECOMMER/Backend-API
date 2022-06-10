@@ -26,7 +26,6 @@ hs_err_pid*
 *.iml
 *.ipr
 *.iws
-*.jar
 *.sw?
 *~
 .#*
@@ -74,18 +73,7 @@ target/
 
 ### STS ###
 .apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
 
 ### NetBeans ###
 /nbproject/private/
@@ -106,3 +94,6 @@ build/
 ./volumes/redis
 ./volumes/sqlserver/data
 ./volumes/sqlserver/log
+
+### Docker Files ###
+!./volumes/sqlserver/data/Test.mdf

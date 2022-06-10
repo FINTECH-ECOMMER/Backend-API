@@ -9,6 +9,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,7 +30,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Table(name = "videos")
-@SQLDelete(sql = "UPDATE videos SET deleted=true WHERE video_id=?")
+@SQLDelete(sql = "UPDATE videos SET deleted=1 WHERE video_id=?")
+@Where(clause = "deleted=0")
 public class Video implements Serializable {
 
     @Id
