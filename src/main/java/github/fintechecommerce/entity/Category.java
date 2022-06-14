@@ -50,6 +50,5 @@ public class Category implements Serializable{
 
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "category",targetEntity = Product.class)
-//    @JoinColumn(name = "product_id")
-    private List<Product> productcategories;
+    private List<Product> productsInCategory;
 }
