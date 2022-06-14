@@ -76,7 +76,7 @@ public class Product implements Serializable {
                     {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
     private Video video;
 
-//    @OneToMany(cascade = CascadeType.ALL,mappedBy = "products",targetEntity = Image.class)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "product",targetEntity = Image.class)
 //    @JoinColumn(name = "product_id")
-//    private List<Image> productImages;
+    private List<Image> productImages;
 }

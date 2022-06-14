@@ -141,3 +141,14 @@
 2022-06-14 11:44:16.85 spid51      Parallel redo is shutdown for database 'test' with worker pool size [2].
 2022-06-14 11:44:33.31 spid52      XE session 'telemetry_xevents' stopping.
 2022-06-14 11:44:33.48 spid52      XE session 'telemetry_xevents' started.
+2022-06-14 12:30:51.52 spid21s     [DevOpsSnapshotTelemetryTask] Evaluating the background task.
+2022-06-14 12:38:55.78 spid66      RBPEX::NotifyDrop: Called for database ID: [5], file Id [0]
+2022-06-14 12:38:56.34 spid66      RBPEX::NotifyFileShutdown: Called for database ID: [5], file Id [0]
+2022-06-14 12:39:12.90 spid53      [5]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2022-06-14 12:39:12.93 spid53      Starting up database 'test'.
+2022-06-14 12:39:12.94 spid53      RemoveStaleDbEntries: Cleanup of stale DB entries called for database ID: [5]
+2022-06-14 12:39:12.96 spid53      RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized.
+2022-06-14 12:39:14.01 spid53      Parallel redo is started for database 'test' with worker pool size [2].
+2022-06-14 12:39:14.12 spid53      Parallel redo is shutdown for database 'test' with worker pool size [2].
+2022-06-14 12:44:54.36 spid52      XE session 'telemetry_xevents' stopping.
+2022-06-14 12:44:54.55 spid52      XE session 'telemetry_xevents' started.
