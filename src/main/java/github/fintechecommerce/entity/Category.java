@@ -14,6 +14,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @Entity
@@ -46,4 +47,9 @@ public class Category implements Serializable{
     @UpdateTimestamp
     @JsonIgnore
     private LocalDateTime updatedAtDateTime;
+
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "category",targetEntity = Product.class)
+//    @JoinColumn(name = "product_id")
+    private List<Product> productcategories;
 }
