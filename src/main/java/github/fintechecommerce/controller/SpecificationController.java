@@ -14,7 +14,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "${api_prefix}/specifications")
+@RequestMapping(path = "${api_prefix}/z")
 public class SpecificationController {
 
     @Autowired

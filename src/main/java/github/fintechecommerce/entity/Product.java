@@ -85,4 +85,13 @@ public class Product implements Serializable {
     @JoinColumn(name="category_id", nullable=false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Category category;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "product_quantity",
+            joinColumns =
+                    {@JoinColumn(name = "product_id", referencedColumnName = "product_id")},
+            inverseJoinColumns =
+                    {@JoinColumn(name = "quantity_id", referencedColumnName = "quantity_id")})
+    private Quantity quantity;
 }
