@@ -14,8 +14,8 @@ services:
     ports:
       - "${SQL_PORT}:1433"
     volumes:
-      - './volumes/sqlserver/data:/var/opt/mssql/data'
-      - './volumes/sqlserver/log:/var/opt/mssql/log'
+      - './docker/volumes/sqlserver/data:/var/opt/mssql/data'
+      - './docker/volumes/sqlserver/log:/var/opt/mssql/log'
     networks:
       - finecomm-network
   cache-redis:
@@ -25,7 +25,7 @@ services:
     environment:
       REDIS_PASSWORD: ${REDIS_PASSWORD}
     volumes:
-      - './volumes/redis:/data'
+      - './docker/volumes/redis:/data'
     ports:
       - "${REDIS_PORT}:6379"
     networks:
