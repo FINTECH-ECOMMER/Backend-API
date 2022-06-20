@@ -55,6 +55,7 @@ public class RedisConfig {
                 .entryTtl(Duration.ofSeconds(timeToLive))
                 .disableCachingNullValues();
     }
+
     @Bean
     public RedisCacheManager cacheManager() {
         return RedisCacheManager.builder(jedisConnectionFactory())

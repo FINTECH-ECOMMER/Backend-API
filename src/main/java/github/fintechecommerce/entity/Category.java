@@ -9,13 +9,18 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.List;
-
 
 @Entity
 @Data
@@ -24,7 +29,7 @@ import java.util.List;
 @Table(name = "categories")
 @SQLDelete(sql = "UPDATE categories SET deleted=1 WHERE category_id=?")
 @Where(clause = "deleted=0")
-public class Category implements Serializable{
+public class Category implements Serializable {
 
     @Id
     @JsonIgnore
@@ -48,7 +53,6 @@ public class Category implements Serializable{
     @JsonIgnore
     private LocalDateTime updatedAtDateTime;
 
-
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "category",targetEntity = Product.class)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category", targetEntity = Product.class)
     private List<Product> productsInCategory;
 }

@@ -13,7 +13,15 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
@@ -58,8 +66,8 @@ public class Image implements Serializable {
     private LocalDateTime updatedAtDateTime;
 
     @JsonIgnore
-    @ManyToOne( fetch = FetchType.LAZY,optional = false)
-    @JoinColumn(name="product_id", nullable=false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "product_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Product products;
 }

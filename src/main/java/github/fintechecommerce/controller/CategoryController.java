@@ -1,6 +1,5 @@
 package github.fintechecommerce.controller;
 
-
 import github.fintechecommerce.entity.Category;
 import github.fintechecommerce.model.ResponseModel;
 import github.fintechecommerce.service.CategoryService;
@@ -22,10 +21,12 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping({"", "/"})
-    public ResponseModel<List<Category>> getCategories(){return new ResponseModel<>(categoryService.fetchAllCategories());}
+    public ResponseModel<List<Category>> getCategories() {
+        return new ResponseModel<>(categoryService.fetchAllCategories());
+    }
 
     @GetMapping({"/{id}", "/{id}/"})
-    public ResponseModel<Category> getCategory(@NonNull @PathVariable("id") BigInteger categoryId){
-        return  new ResponseModel<>(categoryService.fetchByCategoryId(categoryId));
+    public ResponseModel<Category> getCategory(@NonNull @PathVariable("id") BigInteger categoryId) {
+        return new ResponseModel<>(categoryService.fetchByCategoryId(categoryId));
     }
 }

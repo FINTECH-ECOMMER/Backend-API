@@ -4,18 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Data
@@ -76,16 +77,15 @@ public class Product implements Serializable {
                     {@JoinColumn(name = "video_id", referencedColumnName = "video_id")})
     private Video video;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "products",targetEntity = Image.class)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "products", targetEntity = Image.class)
 //    @JoinColumn(name = "product_id")
     private List<Image> productImages;
 
     @JsonIgnore
-    @ManyToOne( fetch = FetchType.LAZY,optional = false)
-    @JoinColumn(name="category_id", nullable=false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "category_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Category category;
-
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinTable(name = "product_quantity",

@@ -18,10 +18,10 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
     @Cacheable(value = KEY, key = "#categoryId", unless = "#result == null")
-    public Category fetchByCategoryId(BigInteger categoryId){
+    public Category fetchByCategoryId(BigInteger categoryId) {
         var category = categoryRepository.findByCategoryId(categoryId);
 
-        if (category==null)
+        if (category == null)
             throw new RuntimeException("Unexpected result!");
 
         return (Category) category;
