@@ -16,6 +16,7 @@ services:
     volumes:
       - './docker/volumes/sqlserver/data:/var/opt/mssql/data'
       - './docker/volumes/sqlserver/log:/var/opt/mssql/log'
+      - './docker/volumes/sqlserver/backup:/var/opt/mssql/backup'
     networks:
       - finecomm-network
   cache-redis:
