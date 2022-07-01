@@ -7,13 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="fintech-ecommerce-api" />
+        <module name="products" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Fincom" target="17" />
+      <module name="products" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="fintech-ecommerce-api" options="-parameters" />
+      <module name="products" options="" />
     </option>
   </component>
 </project>

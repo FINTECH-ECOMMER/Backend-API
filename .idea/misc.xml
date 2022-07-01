@@ -3,10 +3,10 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/products/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
