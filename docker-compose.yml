@@ -46,6 +46,21 @@ services:
       - "${REDIS_COMMANDER_PORT}:8081"
     networks:
       - finecomm-network
+  rabbitmq:
+    image: rabbitmq:3.9.11-management-alpine
+    container_name: 'rabbitmq'
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASSWORD}
+    ports:
+      - "${RABBITMQ_PORT}:5672"
+      - "${RABBITMQ_UI_PORT}:15672"
+    volumes:
+      - './docker/volumes/rabbitmq/data:/var/lib/rabbitmq/'
+      - './docker/volumes/rabbitmq/log/:/var/log/rabbitmq'
+    networks:
+      - finecomm-network
+    restart: on-failure
 volumes:
   mssql-data:
 networks:
