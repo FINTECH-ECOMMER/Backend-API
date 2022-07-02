@@ -11,13 +11,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Fincom" target="17" />
+      <module name="fintech-ecommerce-api" target="17" />
       <module name="products" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="products" options="" />
+      <module name="fintech-ecommerce-api" options="" />
     </option>
   </component>
 </project>
