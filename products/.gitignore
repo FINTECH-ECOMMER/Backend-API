@@ -90,7 +90,7 @@ build/
 .vscode/
 .env
 
-
+.
 ### Docker Files ###
 ./volumes/redis/
 ./volumes/sqlserver/data/

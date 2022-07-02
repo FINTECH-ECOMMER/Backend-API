@@ -88,3 +88,5 @@ build/
 ### VS Code ###
 .vscode/
 .env
+.mvn/
+.jpb/
