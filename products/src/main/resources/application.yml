@@ -1,0 +1,62 @@
+version: v1
+api_prefix: /api/${version}
+application_name: Product
+database_name: test
+database_password: pass@word1
+database_port: 1433
+database_username: sa
+server_port: 8076
+
+
+management:
+  security:
+    enabled: true
+    roles: ADMIN
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    passowrd: admin
+server:
+  error:
+    whitelabel:
+      enabled: true
+  port: ${server_port}
+spring:
+  application:
+    name: ${application_name}
+  cache:
+    redis:
+      cache-null-values: false
+      time-to-live: 300
+  datasource:
+    password: ${database_password}
+    url: jdbc:sqlserver://localhost:${database_port};DatabaseName=${database_name};encrypt=true;trustServerCertificate=true;
+    username: ${database_username}
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        format_sql: true
+    show-sql: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  redis:
+    host: localhost
+    password: redis
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
