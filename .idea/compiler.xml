@@ -9,10 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fintech-ecommerce-api" />
         <module name="clients" />
+        <module name="error" />
         <module name="eureka-server" />
         <module name="products" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Errors" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
