@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fintech-ecommerce-api" />
+        <module name="clients" />
         <module name="eureka-server" />
         <module name="products" />
       </profile>
@@ -14,7 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="fintech-ecommerce-api" options="" />
+      <module name="fintech-ecommerce-api" options="-parameters" />
     </option>
   </component>
 </project>
