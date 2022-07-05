@@ -1,9 +1,19 @@
+version: v1
+api_prefix: /api/${version}
+application_name: eureka-server
+server_port: 8761
+
 spring:
   application:
-    name: eureka-server
+    name: ${application_name}
+  zipkin:
+    base-url: http://localhost:9411
 
 server:
-  port: 8761
+  error:
+    whitelabel:
+      enabled: true
+  port: ${server_port}
 
 eureka:
   client:

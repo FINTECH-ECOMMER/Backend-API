@@ -61,6 +61,14 @@ services:
     networks:
       - finecomm-network
     restart: on-failure
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "${ZIPKIN_PORT}:9411
+    networks:
+      - finecomm-network
 volumes:
   mssql-data:
 networks:
