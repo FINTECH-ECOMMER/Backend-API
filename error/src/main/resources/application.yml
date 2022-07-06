@@ -14,7 +14,19 @@ spring:
     name: ${application_name}
   zipkin:
     base-url: http://localhost:9411
- 
+  datasource:
+    url: jdbc:sqlserver://localhost:${SQL_PORT};databaseName=${SQL_DATABASE}
+    username: ${SQL_USER}
+    password: ${SQL_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
 eureka:
   client:
     service-url:
