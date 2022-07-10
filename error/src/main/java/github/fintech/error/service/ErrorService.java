@@ -23,6 +23,6 @@ public class ErrorService {
     }
 
     public Error postError(@RequestBody Error error) {
-        return errorRepository.save(error);
+        return errorRepository.saveAndFlush(error);
     }
 }
