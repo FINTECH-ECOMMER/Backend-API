@@ -96,7 +96,7 @@ services:
       - finecomm-network
 
   pgadmin:
-    image: dpage/pgadmin4:6.3
+    image: dpage/pgadmin4:6.11
     restart: unless-stopped
     environment:
       PGADMIN_DEFAULT_EMAIL: ${ADMIN_EMAIL}
