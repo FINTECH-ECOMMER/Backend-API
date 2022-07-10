@@ -15,7 +15,7 @@ spring:
   zipkin:
     base-url: http://localhost:9411
   datasource:
-    url: jdbc:sqlserver://localhost:${SQL_PORT};databaseName=${SQL_DATABASE}
+    url: jdbc:postgresql://localhost:${SQL_PORT};databaseName=${SQL_DATABASE}
     username: ${SQL_USER}
     password: ${SQL_PASSWORD}
   jpa:

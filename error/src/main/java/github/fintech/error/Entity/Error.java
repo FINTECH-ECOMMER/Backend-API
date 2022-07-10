@@ -14,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 
@@ -24,25 +25,49 @@ import java.time.LocalDateTime;
 @Table(name = "errors")
 @SQLDelete(sql = "UPDATE errors SET deleted=1 WHERE category_id=?")
 @Where(clause = "deleted=0")
-public class Error {
+public class Error implements Serializable {
     @Id
     @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "error_id", nullable = false, columnDefinition = "NUMERIC(38,0)", unique = true)
     private BigInteger errorId;
+
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String errorName;
 
-//    private String message;
-//    private String stackTrace;
-//    private String timestamp;
-//    private String serviceName;
-//    private String serviceEndpoint;
-//    private String ipAddress;
-//    private String endPoint;
-//    private String endPointMethod;
-//    private String requestParams;
-//    private String errorDate;
+    @Column(nullable = false, columnDefinition = "VARCHAR(Max) DEFAULT ''")
+    private String message;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String stackTrace;
+
+    @CreationTimestamp
+    @JsonIgnore
+    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    private LocalDateTime timestamp;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String serviceName;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String serviceEndpoint;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String ipAddress;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String endPoint;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String endPointMethod;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
+    private String requestParams;
+
+    @CreationTimestamp
+    @JsonIgnore
+    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    private LocalDateTime errorDate;
 
     @Column(nullable = false, columnDefinition = "BIT DEFAULT 0")
     @JsonIgnore
