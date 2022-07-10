@@ -15,9 +15,9 @@ spring:
   zipkin:
     base-url: http://localhost:9411
   datasource:
-    url: jdbc:postgresql://localhost:${SQL_PORT};databaseName=${SQL_DATABASE}
-    username: ${SQL_USER}
-    password: ${SQL_PASSWORD}
+    url: jdbc:postgresql://localhost:${POSTGRES_DB_PORT};databaseName=${POSTGRES_DB_NAME}
+    username: ${POSTGRES_DB_USER}
+    password: ${POSTGRES_DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: create-drop
