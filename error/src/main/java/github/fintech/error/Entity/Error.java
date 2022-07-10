@@ -23,8 +23,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "errors")
-@SQLDelete(sql = "UPDATE errors SET deleted=1 WHERE category_id=?")
-@Where(clause = "deleted=0")
+@SQLDelete(sql = "UPDATE errors SET deleted=true WHERE error_id=?")
+@Where(clause = "deleted=false")
 public class Error implements Serializable {
     @Id
     @JsonIgnore
@@ -36,7 +36,7 @@ public class Error implements Serializable {
     private String errorName;
 
     @Column(nullable = false, columnDefinition = "VARCHAR DEFAULT ''")
-    private String message;
+    private String errorMessage;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String stackTrace;
@@ -54,9 +54,6 @@ public class Error implements Serializable {
 
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String ipAddress;
-
-    @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
-    private String endPoint;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String endPointMethod;

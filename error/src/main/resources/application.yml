@@ -26,11 +26,14 @@ spring:
     password: ${POSTGRES_DB_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+        jdbc:
+          lobs:
+            non_contextual_lob_handling: true
     show-sql: true
 
 eureka:
