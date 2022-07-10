@@ -36,7 +36,6 @@ hs_err_pid*
 .factorypath
 .gradle
 .idea
-.idea/
 .metadata
 .project
 .recommenders
@@ -68,6 +67,7 @@ secrets.yml
 
 HELP.md
 target/
+./target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -89,5 +89,9 @@ build/
 ### VS Code ###
 .vscode/
 .env
-.mvn/
-.jpb/
+
+.
+### Docker Files ###
+./volumes/redis/
+./volumes/sqlserver/data/
+./volumes/sqlserver/log/

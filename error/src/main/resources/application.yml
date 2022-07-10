@@ -1,0 +1,46 @@
+version: v1
+api_prefix: /api/${version}
+application_name: error
+server_port: 8072
+POSTGRES_DB: postgres
+POSTGRES_DB_HOST: localhost
+POSTGRES_DB_NAME: utility
+POSTGRES_DB_PORT: 5432
+POSTGRES_DB_PASSWORD: pass@word1
+POSTGRES_DB_USER: sa
+
+
+server:
+  error:
+    whitelabel:
+      enabled: true
+  port: ${server_port}
+spring:
+  application:
+    name: ${application_name}
+  zipkin:
+    base-url: http://localhost:9411
+  datasource:
+    url: jdbc:postgresql://localhost:${POSTGRES_DB_PORT}/${POSTGRES_DB_NAME}
+    username: ${POSTGRES_DB_USER}
+    password: ${POSTGRES_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          lobs:
+            non_contextual_lob_handling: true
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true

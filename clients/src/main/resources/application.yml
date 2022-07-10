@@ -1,0 +1,23 @@
+version: v1
+api_prefix: /api/${version}
+application_name: clients
+server_port: 8073
+
+
+server:
+  error:
+    whitelabel:
+      enabled: true
+  port: ${server_port}
+spring:
+  application:
+    name: ${application_name}
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
