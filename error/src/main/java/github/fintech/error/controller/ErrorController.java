@@ -33,7 +33,7 @@ public class ErrorController {
     }
 
     @GetMapping({"/{id}", "/{id}/"})
-    public ResponseModel<Error> getCategory(@NonNull @PathVariable("id") BigInteger errorId) {
+    public ResponseModel<Error> getError(@NonNull @PathVariable("id") BigInteger errorId) {
         return new ResponseModel<>(errorService.fetchByErrorId(errorId));
     }
 }

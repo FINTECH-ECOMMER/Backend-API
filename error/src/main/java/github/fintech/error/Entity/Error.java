@@ -35,7 +35,7 @@ public class Error implements Serializable {
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
     private String errorName;
 
-    @Column(nullable = false, columnDefinition = "VARCHAR(Max) DEFAULT ''")
+    @Column(nullable = false, columnDefinition = "VARCHAR DEFAULT ''")
     private String message;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
@@ -43,7 +43,7 @@ public class Error implements Serializable {
 
     @CreationTimestamp
     @JsonIgnore
-    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    @Column(nullable = false, columnDefinition = "DATE DEFAULT NOW()")
     private LocalDateTime timestamp;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(150) DEFAULT ''")
@@ -66,15 +66,14 @@ public class Error implements Serializable {
 
     @CreationTimestamp
     @JsonIgnore
-    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    @Column(nullable = false, columnDefinition = "DATE DEFAULT NOW()")
     private LocalDateTime errorDate;
 
-    @Column(nullable = false, columnDefinition = "BIT DEFAULT 0")
+    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
     @JsonIgnore
     private Boolean deleted = Boolean.FALSE;
 
     @CreationTimestamp
-    @Column(nullable = false, columnDefinition = "DATETIME DEFAULT GETDATE()")
+    @Column(nullable = false, columnDefinition = "DATE DEFAULT NOW()")
     private LocalDateTime createdAtDateTime;
-
 }

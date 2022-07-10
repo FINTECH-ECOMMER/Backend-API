@@ -12,7 +12,6 @@ import java.util.List;
 @Service
 public class ErrorService {
     public static final String KEY = "ERRORS";
-
     @Autowired
     private ErrorRepository errorRepository;
 
