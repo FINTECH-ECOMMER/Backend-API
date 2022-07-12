@@ -8,12 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="clients" />
-        <module name="error" />
         <module name="eureka-server" />
+        <module name="rabbitmq" />
         <module name="products" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="error" target="18" />
       <module name="Errors" target="17" />
     </bytecodeTargetLevel>
   </component>

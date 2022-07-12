@@ -8,6 +8,7 @@
         <module>eureka-server</module>
         <module>clients</module>
         <module>error</module>
+        <module>rabbitmq</module>
     </modules>
 
 
