@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="clients" />
         <module name="error" />
+        <module name="apiiGateway" />
         <module name="eureka-server" />
         <module name="products" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="apiGateway" target="17" />
       <module name="Errors" target="17" />
     </bytecodeTargetLevel>
   </component>
