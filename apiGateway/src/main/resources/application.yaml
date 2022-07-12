@@ -1,8 +1,7 @@
 version: v1
 api_prefix: /api/${version}
-application_name: clients
-server_port: 8073
-
+application_name: apiGateway
+server_port: 8078
 
 server:
   error:
@@ -12,12 +11,21 @@ server:
 spring:
   application:
     name: ${application_name}
- 
+  zipkin:
+    base-url: http://localhost:9411
+  cloud:
+    gateway:
+      routes:
+        - id: products
+          uri: lb://PRODUCTS
+          predicates:
+            - Path=/${api_prefix}/products/**
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-     fetch-registry: true
+      fetch-registry: true
     register-with-eureka: true
   instance:
     prefer-ip-address: true

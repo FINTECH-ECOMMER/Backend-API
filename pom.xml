@@ -8,7 +8,11 @@
         <module>eureka-server</module>
         <module>clients</module>
         <module>error</module>
+<<<<<<< HEAD
         <module>rabbitmq</module>
+=======
+        <module>apiGateway</module>
+>>>>>>> 94fe6cb42710a985e8038baf91067c73bfa47d03
     </modules>
 
 
