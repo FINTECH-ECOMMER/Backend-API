@@ -1,8 +1,12 @@
 package github.fincommerce.utils;
 
+import github.fincommerce.clients.errors.ErrorRequest;
 import github.fincommerce.model.ErrorLog;
 import github.fincommerce.model.ExemptionMessages;
 import github.fincommerce.model.ResponseModel;
+import github.fincommerce.rabbitmq.RabbitMQMessageProducer;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -15,7 +19,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.time.LocalDateTime;
 
 @ControllerAdvice
+@Slf4j
+@AllArgsConstructor
+
 public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
 //    @ExceptionHandler(value = {Exception.class})
 //    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
@@ -30,8 +38,12 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     protected @ResponseBody ResponseModel<ErrorLog> handleNullPointerException(Exception ex, WebRequest request) {
 
-        var error = new ErrorLog(ExemptionMessages.INTERNAL_SERVER_ERROR.getCustomMessage(), ex.getMessage(), request.getDescription(true));
+        ErrorRequest errorRequest = new ErrorRequest(0, "", "", "", "", "", "", "", "");
+        log.info("new customer registration {}", errorRequest);
 
+        rabbitMQMessageProducer.publish(errorRequest, "internal.exchange", "internal.notification.routing-key");
+
+        var error = new ErrorLog(ExemptionMessages.INTERNAL_SERVER_ERROR.getCustomMessage(), ex.getMessage(), request.getDescription(true));
         return new ResponseModel<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), LocalDateTime.now(), error);
 
     }
@@ -49,10 +61,12 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {JpaSystemException.class})
     @ResponseStatus(value = HttpStatus.BAD_GATEWAY)
     protected @ResponseBody ResponseModel<ErrorLog> handleNullPointerException(IllegalArgumentException ex, WebRequest request) {
+        ;
 
         var error = new ErrorLog(ExemptionMessages.BAD_GATEWAY.getCustomMessage(), ex.getMessage(), request.getDescription(true));
 
         return new ResponseModel<>(HttpStatus.BAD_GATEWAY.value(), HttpStatus.BAD_GATEWAY.getReasonPhrase(), LocalDateTime.now(), error);
 
     }
+
 }

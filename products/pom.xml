@@ -77,7 +77,12 @@
             <groupId>github.fincommerce</groupId>
             <artifactId>rabbitmq</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-
+        </dependency>
+        <dependency>
+            <groupId>github.fincommerce</groupId>
+            <artifactId>clients</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
