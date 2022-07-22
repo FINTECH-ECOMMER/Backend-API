@@ -10,6 +10,7 @@
         <module>error</module>
         <module>rabbitmq</module>
         <module>apiGateway</module>
+        <module>encryption</module>
     </modules>
 
 

@@ -1,4 +1,4 @@
-package github.fincommerce.products;
+package github.fincommerce.clients.products;
 
 import org.springframework.cloud.openfeign.FeignClient;
 
